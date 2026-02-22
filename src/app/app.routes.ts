@@ -13,6 +13,11 @@ export const routes: Routes = [
                         loadComponent: () => import('./modules/home/home').then(m => m.Home)
                     }
                 ]
+            },
+            {
+                path: '',
+                redirectTo: 'home',
+                pathMatch: 'full'
             }
         ]
     }
