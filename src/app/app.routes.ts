@@ -2,11 +2,17 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
     {
-        path: 'home',
+        path: '',
+        loadComponent: () => import('./modules/layout/layout').then(m => m.Layout),
         children: [
             {
-                path: '',
-                loadComponent: () => import('./modules/home/home').then(m => m.Home)
+                path: 'home',
+                children: [
+                    {
+                        path: '',
+                        loadComponent: () => import('./modules/home/home').then(m => m.Home)
+                    }
+                ]
             }
         ]
     }
