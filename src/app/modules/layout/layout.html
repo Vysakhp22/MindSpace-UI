@@ -47,10 +47,12 @@
     </div>
     <div class="flex-1 p-4 relative">
         <router-outlet></router-outlet>
-        <div class="absolute bottom-8 right-8">
-            <button class="btn btn-primary btn-circle">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
-                    fill="#CCCCCC">
+        <div class="absolute bottom-8 right-8 group">
+            <button
+                class="btn btn-primary btn-circle relative transition-all duration-300 ease-out hover:scale-110 active:scale-95 animate-float">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                    class="w-6 h-6 transition-transform duration-300 group-hover:rotate-90" viewBox="0 -960 960 960"
+                    fill="currentColor">
                     <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z" />
                 </svg>
             </button>
